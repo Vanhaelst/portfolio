@@ -1,0 +1,61 @@
+@mixin flex()
+
+
+@mixin c-background-cover(
+   $bg-size: cover,
+   $bg-pos: center center,
+   $bg-attach: scroll
+){
+   background-size: $bg-size;
+   background-position: $bg-pos;
+   background-repeat: no-repeat;
+   background-attachment: $bg-attach;
+}
+
+
+
+@mixin c-transition(
+   $time: 0.5s
+){
+   transition: all $time;
+}
+
+
+
+@mixin transition($transition...) {
+   @if $enable-transitions {
+      @if length($transition) == 0 {
+         transition: $transition-base;
+      } @else {
+         transition: $transition;
+      }
+   }
+}
+
+
+
+@mixin hover {
+   @if $enable-hover-media-query {
+       @media (hover: hover) {
+         &:hover { @content }
+       }
+   }
+   @else {
+   &:hover { @content }
+   }
+}
+
+
+@mixin hover-focus {
+   @if $enable-hover-media-query {
+      &:focus {
+         @content;
+      }
+      @include hover { @content; }
+   } @else {
+      &:focus,
+      &:hover {
+         @content;
+      }
+   }
+}

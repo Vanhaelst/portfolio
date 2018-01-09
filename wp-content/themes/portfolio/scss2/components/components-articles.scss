@@ -1,0 +1,70 @@
+.articles{
+  padding: 25px 0;
+
+  article{
+    border-bottom: 1px solid #eff1f2;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    &:last-child{
+      border: none;
+      margin-bottom: 0;
+    }
+    .container{
+      @media screen and (min-width: 678px){
+        padding: 45px 0;
+      }
+    }
+    @media screen and (min-width: 678px) {
+      &:nth-child(even) {
+        .container {
+          @include flex(space-evenly, center, row-reverse);
+        }
+      }
+      &:nth-child(odd) {
+        .container {
+          @include flex(space-evenly, center, row);
+        }
+      }
+    }
+  }
+
+  img{
+    width: 100%;
+    padding-bottom: 25px;
+    @media screen and (max-width: 767px) {
+      padding-top: $global-spacing-unit-small;
+    }
+  }
+
+  .c-btn {
+    width: 100%;
+    margin: 15px 0 0 0;
+    padding: 15px;
+    line-height: 85%;
+  }
+}
+
+
+
+.c-label{
+  font-family: 'proxima_novalight', $font-family-sansSerif;
+  color: white;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 99%;
+  &.pitstoppro{
+    background: #bdcf30; /* Old browsers */
+    background: -moz-linear-gradient(left, #bdcf30 0%, #51aa4d 90%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #bdcf30 0%,#51aa4d 90%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #bdcf30 0%,#51aa4d 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdcf30', endColorstr='#51aa4d',GradientType=1 ); /* IE6-9 */  padding: 5px;
+  }
+  &.switch{
+    background: #14afe5; /* Old browsers */
+    background: -moz-linear-gradient(left, #14afe5 0%, #006198 90%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #14afe5 0%,#006198 90%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #14afe5 0%,#006198 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#14afe5', endColorstr='#006198',GradientType=1 ); /* IE6-9 */  padding: 5px;
+  }
+}

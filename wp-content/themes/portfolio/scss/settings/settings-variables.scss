@@ -1,0 +1,117 @@
+
+/*    Spacing
+====================================================================== */
+
+
+$spacing:  50px;
+
+
+$spacing--xs:  calc($spacing / 5);
+$spacing--sm:  calc($spacing / 2);
+$spacing--md:  $spacing;
+$spacing--lg:  calc($spacing * 1.5);
+$spacing--xl:  calc($spacing * 2);
+$spacing--xxl: calc($spacing * 3);
+
+
+
+/*    Grid
+====================================================================== */
+
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-xs-max: calc($screen-sm - 1);
+$screen-sm-max: calc($screen-md - 1);
+$screen-md-max: calc($screen-lg - 1);
+$screen-lg-max: calc($screen-xl - 1);
+
+
+
+
+/*    Color Palette
+====================================================================== */
+
+// Start with assigning color names to specific hex values.
+$white:  #fff !default;
+$black:  #000 !default;
+$red:    #d9534f !default;
+$orange: #f0ad4e !default;
+$yellow: #ffd500 !default;
+$green:  #5cb85c !default;
+$blue:   #0275d8 !default;
+$teal:   #5bc0de !default;
+$pink:   #ff5b77 !default;
+$purple: #613d7c !default;
+
+// Create grayscale
+$gray:                      #696969 !default;
+$gray-dark:                 darken($gray, 20%)  !default;
+$gray-light:                lighten($gray, 20%) !default;
+$gray-lighter:              lighten($gray, 40%) !default
+$gray-lightest:             lighten($gray, 60%) !default;
+
+// Reassign color vars to semantic color scheme
+$brand-primary:             $blue !default;
+$brand-secondary:           $green !default;
+$brand-tertiary:            $white !default;
+$brand-success:             $green !default;
+$brand-info:                $teal !default;
+$brand-warning:             $orange !default;
+$brand-danger:              $red !default;
+$brand-inverse:             $gray-dark !default;
+
+
+
+/*    Typography
+====================================================================== */
+
+$font-family: 'Raleway', sans-serif;
+
+
+
+
+
+$global-radius: 2px;
+$btn-ghost-border-width: 2px;
+
+
+
+
+
+
+
+
+
+// Carousel
+
+$carousel-control-color:                      $white !default;
+$carousel-control-width:                      15% !default;
+$carousel-control-opacity:                    .5 !default;
+
+$carousel-indicator-width:                    30px !default;
+$carousel-indicator-height:                   3px !default;
+$carousel-indicator-spacer:                   3px !default;
+$carousel-indicator-active-bg:                $white !default;
+
+$carousel-caption-width:                      70% !default;
+$carousel-caption-color:                      $white !default;
+
+$carousel-control-icon-width:                 20px !default;
+
+$carousel-control-prev-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$carousel-control-next-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+$carousel-transition:           transform .6s ease-in-out !default;
+
+
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
