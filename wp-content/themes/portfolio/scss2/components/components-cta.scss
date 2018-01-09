@@ -1,0 +1,59 @@
+.c-cta{
+  background-color: $primary-color;
+  background-image: url('../assets/images/pitstoppro/backgrounds_mobile/cta_img.png');
+
+  @include background();
+
+
+  @media screen and (min-width: 768px){
+    background-image: url('../assets/images/pitstoppro/backgrounds_desktop/cta_img.png');
+  }
+
+
+  .container{
+    @include flex(center, center)
+    padding: $global-spacing-unit;
+    @media screen and (min-width: 992px) {
+      padding: $global-spacing-unit-large 0;
+    }
+  }
+  &--container{
+    background-color: white;
+    padding: $global-spacing-unit-small;
+    @media screen and (min-width: 992px) {
+      padding: $global-spacing-unit;
+    }
+  }
+  &--content{
+
+    .c-title{
+      color: black;
+      text-align: center;
+      @media screen and (min-width: 768px) {
+        text-align: left;
+        padding: 0;
+      }
+    }
+    .c-paragraph{
+      color: #2c2c2c;
+      text-align: center;
+      padding: 0;
+      @media screen and (min-width: 768px) {
+        text-align: left;
+      }
+    }
+
+
+    .c-btn{
+      @media screen and (max-width: 767px) {
+        display: table;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+
+.c-shadow{
+  @include drop-shadow();
+}

@@ -1,0 +1,42 @@
+.c-automation{
+  padding-bottom: 70vw;
+  border-bottom: 1px solid #eff1f2;
+  background-image: url('../assets/images/pitstoppro/backgrounds_mobile/automation_img.png');
+  @include background(contain, center, bottom);
+  @media screen and (min-width: 992px) {
+    padding-bottom: 0;
+    background-image: url('../assets/images/pitstoppro/backgrounds_desktop/automation_img.png');
+    @include background(contain, left, bottom);
+  }
+
+
+    .container{
+    display: flex;
+    justify-content: flex-end;
+    padding: 100px 0;
+  }
+    &--list{
+      list-style-type: none;
+      padding-left: 0;
+      padding-top: $global-spacing-unit-tiny;
+    @media screen and (min-width: 992px) {
+      padding-left: 100px;
+    }
+      &__item{
+      padding-bottom: $global-spacing-unit-small;
+    }
+    &__title{
+      display: block;
+      color: $primary-color;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-family: 'proxima_novaextrabold', $font-family-sansSerif;
+    }
+    &__number{
+      @media screen and (min-width: 786px) {
+        padding-right: 10px;
+      }
+    }
+  }
+}

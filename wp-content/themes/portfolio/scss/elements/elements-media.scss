@@ -1,0 +1,40 @@
+/* ==========================================================================
+#MEDIA
+========================================================================== */
+
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ */
+
+
+img{
+  max-width: 100%;
+}
+
+.o-media {
+  @include inuit-clearfix();
+  display: block;
+}
+
+
+.o-media__img {
+  float: left;
+
+  > img {
+    display: block;
+  }
+
+}
+
+
+.o-media__body {
+  overflow: hidden;
+  display: block;
+
+  &,
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+}

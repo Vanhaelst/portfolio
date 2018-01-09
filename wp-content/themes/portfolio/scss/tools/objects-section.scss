@@ -1,0 +1,35 @@
+
+
+/* Custom selection color */
+::selection{
+   background: $brand-primary;
+   color:#fff
+}
+
+
+
+.row{
+   width: 100%;
+}
+
+
+/* Background color for sections */
+section{
+   padding: 50px 0;
+   @media screen and (min-width: $screen-sm) {
+      padding: 75px 0;
+   }
+   @media screen and (min-width: $screen-lg){
+      padding: 150px 0;
+   }
+   &:nth-child(even){
+      background-color: #F4F4F4;
+   }
+}
+
+
+/*Bridge background */
+.bridge-bg{
+   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-353/bg-social.jpg');
+   @include c-background-cover;
+}

@@ -1,0 +1,141 @@
+.contact {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+
+input,
+textarea{
+    transition: border-width .1s ease-out;
+    padding: 10px 0 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgb(120,120,120);
+    
+    &:focus {
+        border: 0;
+        border-bottom: 2px solid rgb(120,120,120);
+        outline: 0;
+    }
+    
+    &:active {
+        border: 0;  
+    }
+}
+
+label {
+    opacity: 1;
+    transition: opacity .2s ease-out,
+                transform .2s ease-out,
+                color .2s ease-out;
+    transform: translateY(0);
+}
+
+input:placeholder-shown + label,
+textarea:placeholder-shown + label {
+    opacity: 0;
+    font-size: .85em;
+    color: rgb(170,170,170);
+    transform: translateY(25px);
+}
+
+
+textarea{
+   resize: none;
+}
+
+
+
+
+.help-block {
+    color: $brand-warning;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: $screen-sm) {
+
+    .gf_left,
+    .gf_right {
+        width: 50%;
+        display: inline-block;
+    }
+
+    .gf_right {
+        padding-left: 8px !important;
+        padding-right: 0 !important;
+    }
+
+    .gf_left {
+        padding-right: 8px !important;
+    }
+}
+
+
+.gf_full {
+    padding-right: 0 !important;
+}
+
+.gfield{
+    padding-top: 25px;
+}
+
+label.gfield_label {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal !important;
+    padding-top: 25px;
+}
+
+
+
+@media only screen and (min-width: 641px){
+    .gform_wrapper .top_label input.medium,
+    .gform_wrapper .top_label select.medium {
+        width: 100% !important;
+    }
+}
+
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: $brand-primary !important;
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
+
+
+input#gform_submit_button_1 {
+    background-color: $brand-primary;
+    padding: 10px 50px;
+    margin: 0;
+    color: white;
+    border-radius: 0;
+    border: none;
+    &:hover{
+        background-color: darken( $brand-primary, 10%);
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,126 @@
+header{
+  position:relative;
+  overflow:hidden;
+
+
+  @include flex();
+
+
+  height: 100vh;
+  //height: calc(100vh - 75px);
+  min-height:400px;
+  max-height:100vh;
+  width:100vw;
+  color: white;
+  @keyframes grow{
+    0% { transform:scale(1)}
+    50% { transform:scale(1.2)}
+  }
+
+  &:after{
+    content:"";
+    width:100%;
+    height:40%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:-1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(27,32,48,1) 100%);
+  }
+
+  &:before{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:#1B2030 url('https://unsplash.it/1999/999?image=1063');
+    @include background();
+    background-attachment:fixed;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+    animation: grow 60s  linear 10ms infinite;
+    transition:all 0.2s ease-in-out;
+    z-index:-2
+  }
+
+  .info{
+    width:100%;
+    text-align:center;
+    text-shadow:0 2px 3px rgba(0,0,0,0.2);
+    font-size:0.7em;
+    .tags{
+      span{
+        padding: 0 5px;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+    }
+
+    .title{
+      text-transform: uppercase;
+
+    }
+  }
+  .meta{
+    font-style:italic;
+    font-size: 0.7em;
+    .author{
+      display:block;
+      margin: 0 auto;
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      @include background();
+      filter: grayscale(80%);
+      margin-bottom:5px
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.about{
+  padding: 50px 0;
+
+  &-rij{
+    padding: 50px 0;
+    @media screen and (min-width: $screen-md){
+      height: 100vh;
+      padding: 0;
+    }
+  }
+  &-bg-image{
+    @media screen and (max-width: $screen-md-max){
+      background-image: none !important;
+    }
+
+    @include background(250px, 15% center);
+    height: 100%;
+
+    &.fixed-bg{
+      @media screen and (min-width: $screen-lg) {
+        background-position: 25% center;
+        background-attachment: fixed;
+      }
+    }
+  }
+}
+*/

@@ -1,0 +1,61 @@
+nav{
+  z-index: 1000;
+  background-color: $white;
+  border-bottom: 1px solid $gray-light;
+
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .page_item{
+    display: inline-block;
+    margin: 10px 25px;
+    a {
+      text-transform: uppercase;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-bottom: .2rem;
+      //transition: opacity .5s;
+      color: gray;
+      text-decoration: none;
+      font-size: 1.2rem;
+      &:hover,
+      &.active{
+        border-bottom: 2px solid $brand-primary;
+        //transition: all .5s;
+      }
+    }
+  }
+
+  .menu{
+    display: inline-block;
+    float: right;
+  }
+
+}
+
+
+
+
+
+
+
+.menu{
+  &-sticky{
+    position: fixed;
+    top: -75px;
+    left: 0;
+    right: 0;
+    transition: all .25s;
+    opacity: 0;
+    &.is-shown{
+      top: 0;
+      transition: all .25s;
+      opacity: 1;
+    }
+  }
+}
+
+

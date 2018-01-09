@@ -1,0 +1,74 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin flex(
+  $jc: center,
+  $ai: center,
+  $dir: row ) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+
+  @if $dir == 'column' {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  @else {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $dir;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: $dir;
+  flex-direction: $dir;
+
+}
+
+
+
+
+@mixin background(
+  $size: cover,
+  $posx: center,
+  $posy: center ) {
+  background-size: $size;
+  background-position: $posx $posy;
+  background-repeat: no-repeat;
+
+  -moz-background-size: $size;
+  -ms-background-position-x: $posx;
+  -ms-background-position-y: $posy;
+  -o-background-size: $size;
+  -webkit-background-size: $size;
+}
+
+
+
+@mixin drop-shadow(){
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+}
+
+
+
+
+@mixin filter(
+  $filter,
+  $filter-hover ){
+  -webkit-filter: $filter; /* Safari 6.0 - 9.0 */
+  filter: $filter;
+  &:hover{
+    -webkit-filter: $filter-hover; /* Safari 6.0 - 9.0 */
+    filter: $filter-hover;
+  }
+}

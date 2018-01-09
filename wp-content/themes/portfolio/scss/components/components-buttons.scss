@@ -1,0 +1,176 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+.c-btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  padding: 10px 25px;
+  border-radius: $global-radius;
+  text-transform: uppercase;
+  font-family: $font-family;
+  border: none;
+
+  @include transition();
+
+}
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-btn--primary {
+  background-color: $brand-primary;
+  color: #ffffff;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($brand-primary, 5%);
+  }
+
+}
+
+.c-btn--secondary {
+  background-color: $brand-secondary;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($brand-secondary, 5%);
+  }
+
+}
+
+.c-btn--tertiary {
+  background-color: $brand-tertiary;
+  color: $brand-tertiary;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: darken($brand-tertiary, 5%);;
+  }
+
+  &:hover,
+  &:focus {
+  }
+
+}
+
+
+.c-btn--white {
+  color: white;
+}
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+  padding: $spacing--xs $spacing--sm;
+  font-size: 14px;
+}
+
+.c-btn--large {
+  padding: $spacing--sm $spacing;
+
+}
+
+
+
+
+
+/* Ghost buttons
+   ========================================================================== */
+
+/**
+ * Ghost buttons have see-through backgrounds and are bordered.
+ */
+
+$btn-ghost-border-width: 2px;
+
+.c-btn--ghost {
+  border: $btn-ghost-border-width solid currentColor;
+  padding: (10px - $btn-ghost-border-width) (20px - $btn-ghost-border-width);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background: none;
+  }
+
+  &.c-btn--small {
+    padding: ($spacing--xs - $btn-ghost-border-width) ($spacing--sm - $btn-ghost-border-width);
+    font-size: 14px;
+  }
+  &.c-btn--large {
+    padding: ($spacing--xs - $btn-ghost-border-width) ($spacing--sm - $btn-ghost-border-width);
+  }
+
+  &.c-btn--primary {
+    color: $brand-primary;
+
+    &:hover,
+    &:focus {
+      color: darken($brand-primary, 10%);
+    }
+
+  }
+
+  &.c-btn--secondary {
+    color: $brand-secondary;
+
+    &:hover,
+    &:focus {
+      color: darken($brand-secondary, 10%);
+    }
+
+  }
+
+  &.c-btn--tertiary {
+    color: $brand-tertiary;
+
+    &:hover,
+    &:focus {
+      color: darken($brand-tertiary, 10%);
+    }
+
+  }
+
+}

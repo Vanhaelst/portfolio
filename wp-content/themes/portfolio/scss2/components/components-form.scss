@@ -1,0 +1,97 @@
+.c-form{
+
+  background-image: url('../assets/images/pitstoppro/backgrounds_mobile/form_img.png');
+
+  @include background();
+
+
+  @media screen and (min-width: 768px){
+    background-image: url('../assets/images/pitstoppro/backgrounds_desktop/form_img.png');
+  }
+
+
+
+
+
+  @include flex(center, center)
+  padding: $global-spacing-unit-huge 35px;
+  @media screen and (min-width: 786px) {
+    padding: 200px $global-spacing-unit-large;
+  }
+
+  h2, p{
+    color: black;
+    text-align: center;
+    @media screen and (min-width: 786px) {
+      text-align: left;
+    }
+  }
+
+  &-block{
+    background-color: white;
+    padding:$global-spacing-unit-small;
+    @media screen and (min-width: 768px) {
+      padding: $global-spacing-unit;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: $global-spacing-unit-large;
+    }
+  }
+  &-content{}
+
+  .c-btn{
+    @media screen and (max-width: 767px) {
+      display: block;
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+}
+
+
+
+
+input[type="text"],
+input[type="email"],
+textarea{
+  width: 100%;
+  margin: 5px 0;
+  border: 1px solid gray;
+  padding: 10px;
+  color: gray;
+  resize: none;
+  opacity: 0.5;
+  -webkit-border-radius: $global-radius;
+  -moz-border-radius: $global-radius;
+  border-radius: $global-radius;
+  font-size: 0.9rem;
+  @include transition;
+  font-family: 'proxima_nova_rgregular', $font-family-sansSerif;
+
+  &::placeholder{
+    color: gray;
+    font-family: 'proxima_nova_rgregular', $font-family-sansSerif;
+    font-style: italic;
+
+  }
+  &:focus, {
+    opacity: 1;
+    @include transition;
+
+  }
+}
+
+input[type="text"],
+input[type="email"] {
+  height: 45px;
+  line-height: 45px;
+}
+
+textarea {
+  height: 100px;
+}
+
+
+
+
+

@@ -1,0 +1,127 @@
+/* ==========================================================================
+   VANHAELST CSS
+   ========================================================================== */
+
+/**
+ * Vanhaelst CSS by @vanhaelstI
+ *
+ * www.indyvanahelst.be
+ */
+
+/**
+ * This is the main Vanahelst CSS file. (Based on CSS Wizardy - Unuit CSS)
+ * Please, DO NOT modify this file, except for import additions.
+ * Make your css modifications, additions and extentions in a different file.
+ */
+
+
+
+
+/**
+ * TABLE OF CONTENTS
+ *
+ * SETTINGS: Global variables, site-wide settings, config switches, etc.
+ * Core.................Core settings and setup.
+ * Variables............Project-wide variables and settings.
+ *
+ *
+ *
+ *
+ * TOOLS: Site-wide mixins and functions.
+ * Typography...........All typography and font-size settings.
+ * Clearfix.............Micro clearfix mixin.
+ * Transition...........Mixin for transitioning elements.
+ *
+ *
+ *
+
+ * BASE: Low-specificity, far-reaching rulesets (e.g. resets).
+ * Normalize............A level playing field using @necolas’ Normalize.css.
+ * Reboot...............Nex reset from Bootstrap 4
+ *
+ *
+ *
+ *
+ * ELEMENTS: Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).
+ * Header...............Simple header styles
+ * Media................Base media styles.
+ * Footer...............Simple footer styles.
+ *
+ *
+ *
+ *
+ * OBJECTS: Objects, abstractions, and design patterns (e.g. .o-layout {}).
+ * Section..............Default section styles
+ * List-bare............Lists with no bullets or indents.
+ * List-inline..........A list whose items all site in a line.
+ *
+ *
+ *
+ *
+ * COMPONENTS: Discrete, complete chunks of UI (e.g. .c-carousel {}).
+ * Buttons..............Button component
+ * Navigation...........Navigation component
+ *
+ *
+ *
+ * UTILITIES: high-specificity, very explicit selectors. Overrides and helper classes (e.g. .u-hidden {}).
+ * Clearfix.............Bind our clearfix onto a utility class.
+ * Print................Reset-like styles taken from the HTML5 Boilerplate.
+ * Spacing..............Helper classes to hide content
+ * Visability...........Helper classes to hide content
+ */
+
+
+
+
+
+// settings:
+@import "settings/settings-core";
+@import "settings/settings-variables";
+
+
+//tools
+@import "tools/tools-fontface";
+@import "tools/tools-clearfix";
+@import "tools/tools-mixins";
+@import "tools/tools-transition";
+@import "tools/tools-typography";
+
+
+//base
+// @import "base/normalize";
+@import "base/reboot";
+
+
+//elements
+@import "elements/elements-footer";
+@import "elements/elements-header";
+@import "elements/elements-media";
+
+
+//objects
+@import "objects/objects-list_bare";
+@import "objects/objects-list_inline";
+
+
+//components
+@import "components/components-buttons";
+@import "components/components-navigation";
+@import "components/components-topbar";
+@import "components/components-articles";
+@import "components/components-cta";
+@import "components/components-products";
+@import "components/components-automation";
+@import "components/components-video";
+@import "components/components-form";
+
+
+
+//utilities
+@import "utilities/utilities-clearfix";
+@import "utilities/utilities-print";
+@import "utilities/utilities-spacing";
+@import "utilities/utilities-visability";
+
+
+
