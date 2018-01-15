@@ -110,7 +110,7 @@ h2 {
   line-height: 110%;
   text-transform: uppercase;
   font-weight: 500;
-  margin-bottom: 20px; }
+  margin-bottom: 50px; }
   h2:after {
     content: '';
     display: block;
@@ -459,7 +459,7 @@ footer {
   footer h4, footer p {
     color: #696969; }
 
-header {
+.header {
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -469,16 +469,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -webkit-flex-direction: row;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
   -webkit-box-direction: normal;
   -moz-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -ms-flex-direction: column;
+  flex-direction: column;
   height: 100vh;
   min-height: 400px;
-  max-height: 100vh;
+  max-height: calc(100vh - 48px);
   width: 100vw;
   color: white; }
 
@@ -487,7 +487,7 @@ header {
     transform: scale(1); }
   50% {
     transform: scale(1.2); } }
-  header:after {
+  .header:after {
     content: "";
     width: 100%;
     height: 40%;
@@ -496,14 +496,14 @@ header {
     left: 0;
     z-index: -1;
     background: linear-gradient(to bottom, transparent 0%, #1b2030 100%); }
-  header:before {
+  .header:before {
     content: "";
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background: #1B2030 url("https://unsplash.it/1999/999?image=1063");
+    background: #1B2030 url("https://www.indyvanhaelst.be/wp-content/uploads/2018/01/bg-header.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -519,21 +519,21 @@ header {
     animation: grow 60s  linear 10ms infinite;
     transition: all 0.2s ease-in-out;
     z-index: -2; }
-  header .info {
+  .header .info {
     width: 100%;
     text-align: center;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     font-size: 0.7em; }
-    header .info .tags span {
+    .header .info .tags span {
       padding: 0 5px;
       text-transform: uppercase;
       text-decoration: underline; }
-    header .info .title {
+    .header .info .title {
       text-transform: uppercase; }
-  header .meta {
+  .header .meta {
     font-style: italic;
     font-size: 0.7em; }
-    header .meta .author {
+    .header .meta .author {
       display: block;
       margin: 0 auto;
       width: 50px;
@@ -765,6 +765,54 @@ section {
     .c-btn--ghost.c-btn--tertiary:hover, .c-btn--ghost.c-btn--tertiary:focus {
       color: #e6e5e5; }
 
+.c-navigation {
+  z-index: 1000;
+  background-color: #fff;
+  border-bottom: 1px solid #9c9c9c;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .c-navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+  .c-navigation .menu-item {
+    display: inline-block;
+    margin: 10px 25px; }
+    .c-navigation .menu-item a {
+      text-transform: uppercase;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-bottom: .2rem;
+      color: gray;
+      text-decoration: none;
+      font-size: 1.2rem; }
+      .c-navigation .menu-item a:hover, .c-navigation .menu-item a.active {
+        border-bottom: 2px solid #0275d8; }
+
+.c-navigation--sticky {
+  position: fixed;
+  top: -75px;
+  left: 0;
+  right: 0;
+  transition: all 1s;
+  opacity: 0; }
+  .c-navigation--sticky.is-shown {
+    top: 0;
+    transition: all 1s;
+    opacity: 1; }
+
 .portfolio--item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -846,28 +894,27 @@ section {
     -o-transition: all 0.5s;
     transition: all 0.5s; }
   .portfolio--title:before {
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: -10px;
     border-width: 3px 0 0 3px; }
   .portfolio--title:after {
-    top: 0;
-    right: 0;
+    top: -10px;
+    right: -10px;
     border-width: 3px 3px 0 0; }
   .portfolio--title > :first-child:before {
-    bottom: 0;
-    right: 0;
+    bottom: -10px;
+    right: -10px;
     border-width: 0 3px 3px 0; }
   .portfolio--title > :first-child:after {
-    bottom: 0;
-    left: 0;
+    bottom: -10px;
+    left: -10px;
     border-width: 0 0 3px 3px; }
 
 .portfolio--image {
   position: absolute;
   object-fit: cover;
   width: 100%;
-  height: 100%;
-  z-index: -5; }
+  height: 100%; }
 
 .portfolio--filter {
   -webkit-transition: all 0.5s;

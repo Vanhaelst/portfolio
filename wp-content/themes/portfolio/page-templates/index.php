@@ -12,7 +12,7 @@ get_header();
 
     <!--    Header
     ====================================================================== -->
-    <header>
+    <header class="header">
         <div class="info">
             <h4 class="tags">
                 <span>Development</span>
@@ -43,12 +43,17 @@ get_header();
 
     <!--    Navigation
     ====================================================================== -->
-    <!--
-    <nav>
-        <span class="page_item"><a href="index.php">Indy Vanhaelst</a></span>
+
+    <nav class="c-navigation">
+        <span class="menu-item"><a href="index.php">Indy Vanhaelst</a></span>
         <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
     </nav>
-    -->
+
+    <nav class="c-navigation c-navigation--sticky">
+        <span class="menu-item"><a href="index.php">Indy Vanhaelst</a></span>
+        <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+    </nav>
+
 
 
 

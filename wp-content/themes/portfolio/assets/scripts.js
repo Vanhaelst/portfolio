@@ -21,3 +21,19 @@ $( ".portfolio--item__inner" ).hover(
       $('.portfolio--title').css({"opacity": "1"});
     }
 );
+
+
+var headerHeight = $('.header').height();
+var stickyHeight = headerHeight + 100;
+
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+  if (scroll >= stickyHeight) {
+    $(".c-navigation--sticky").addClass("is-shown");
+  }
+  else{
+    $(".c-navigation--sticky").removeClass("is-shown");
+  }
+});
+
+console.log(stickyHeight);

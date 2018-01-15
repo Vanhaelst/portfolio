@@ -1,15 +1,15 @@
-header{
+.header{
   position:relative;
   overflow:hidden;
 
 
-  @include flex();
+  @include flex(center, center, column);
 
 
   height: 100vh;
   //height: calc(100vh - 75px);
   min-height:400px;
-  max-height:100vh;
+  max-height:calc(100vh - 48px);
   width:100vw;
   color: white;
   @keyframes grow{
@@ -35,7 +35,7 @@ header{
     position:absolute;
     top:0;
     left:0;
-    background:#1B2030 url('https://unsplash.it/1999/999?image=1063');
+    background:#1B2030 url('https://www.indyvanhaelst.be/wp-content/uploads/2018/01/bg-header.jpg');
     @include background();
     background-attachment:fixed;
     -webkit-backface-visibility: hidden;

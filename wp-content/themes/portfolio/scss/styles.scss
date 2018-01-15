@@ -82,9 +82,8 @@
 
 
 
-
 // settings:
-@import "settings/settings-core";
+//@import "settings/settings-core";
 @import "settings/settings-variables";
 
 
@@ -115,6 +114,7 @@
 
 //components
 @import "components/components-buttons";
+@import "components/components-navigation";
 @import "components/components-portfolio";
 @import "components/components-portfolio-grid";
 @import "components/components-portfolio-item";

@@ -1,6 +1,7 @@
 $portfolio-border-width: 3px;
-$portfolio-border-position: 0;
-$portfolio-border-position-hover: -10px;
+$portfolio-border-position: -10px;
+$portfolio-border-position-hover: -20px;
+
 
 
 .portfolio{
@@ -87,7 +88,6 @@ $portfolio-border-position-hover: -10px;
       object-fit: cover;
       width: 100%;
       height: 100%;
-      z-index: -5;
    }
 }
 
